@@ -101,8 +101,7 @@
 		61218E862AC45D2E00EDE0D8 /* SephoraExercice */ = {
 			isa = PBXGroup;
 			children = (
-				61218E872AC45D2E00EDE0D8 /* AppDelegate.swift */,
-				61218E892AC45D2E00EDE0D8 /* SceneDelegate.swift */,
+				61218EBA2AC45D4400EDE0D8 /* Application */,
 				61218E8B2AC45D2E00EDE0D8 /* ViewController.swift */,
 				61218E8D2AC45D2E00EDE0D8 /* Main.storyboard */,
 				61218E932AC45D3000EDE0D8 /* Assets.xcassets */,
@@ -128,6 +127,15 @@
 				61218EAD2AC45D3000EDE0D8 /* SephoraExerciceUITestsLaunchTests.swift */,
 			);
 			path = SephoraExerciceUITests;
+			sourceTree = "<group>";
+		};
+		61218EBA2AC45D4400EDE0D8 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				61218E872AC45D2E00EDE0D8 /* AppDelegate.swift */,
+				61218E892AC45D2E00EDE0D8 /* SceneDelegate.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
