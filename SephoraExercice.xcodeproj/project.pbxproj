@@ -12,7 +12,6 @@
 		61218E922AC45D2E00EDE0D8 /* SephoraExercice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 61218E902AC45D2E00EDE0D8 /* SephoraExercice.xcdatamodeld */; };
 		61218E942AC45D3000EDE0D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61218E932AC45D3000EDE0D8 /* Assets.xcassets */; };
 		61218E972AC45D3000EDE0D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61218E952AC45D3000EDE0D8 /* LaunchScreen.storyboard */; };
-		61218EA22AC45D3000EDE0D8 /* SephoraExerciceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61218EA12AC45D3000EDE0D8 /* SephoraExerciceTests.swift */; };
 		61218EAC2AC45D3000EDE0D8 /* SephoraExerciceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61218EAB2AC45D3000EDE0D8 /* SephoraExerciceUITests.swift */; };
 		61218EAE2AC45D3000EDE0D8 /* SephoraExerciceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61218EAD2AC45D3000EDE0D8 /* SephoraExerciceUITestsLaunchTests.swift */; };
 		61218F362AC4742500EDE0D8 /* Domain.docc in Sources */ = {isa = PBXBuildFile; fileRef = 61218F352AC4742500EDE0D8 /* Domain.docc */; };
@@ -59,8 +58,10 @@
 		61808C072AC581AC0077E6C8 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61808C062AC581AC0077E6C8 /* UIImageView+.swift */; };
 		61808C0C2AC5974C0077E6C8 /* AppDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 61808C0A2AC5974C0077E6C8 /* AppDataModel.xcdatamodeld */; };
 		61808C4E2AC59BCD0077E6C8 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61808C4D2AC59BCD0077E6C8 /* CoreDataHelper.swift */; };
-		61808C612AC5A7420077E6C8 /* ProductEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61808C5F2AC5A7420077E6C8 /* ProductEntity+CoreDataClass.swift */; };
-		61808C622AC5A7420077E6C8 /* ProductEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61808C602AC5A7420077E6C8 /* ProductEntity+CoreDataProperties.swift */; };
+		61808C662AC5D19C0077E6C8 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61808C652AC5D19C0077E6C8 /* MainViewModelTests.swift */; };
+		61808C682AC5D27F0077E6C8 /* ProductsUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61808C672AC5D27F0077E6C8 /* ProductsUseCaseMock.swift */; };
+		61808C6B2AC5D9DE0077E6C8 /* ProductEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61808C5F2AC5A7420077E6C8 /* ProductEntity+CoreDataClass.swift */; };
+		61808C6C2AC5D9DE0077E6C8 /* ProductEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61808C602AC5A7420077E6C8 /* ProductEntity+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,7 +147,6 @@
 		61218E962AC45D3000EDE0D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61218E982AC45D3000EDE0D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61218E9D2AC45D3000EDE0D8 /* SephoraExerciceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SephoraExerciceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		61218EA12AC45D3000EDE0D8 /* SephoraExerciceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SephoraExerciceTests.swift; sourceTree = "<group>"; };
 		61218EA72AC45D3000EDE0D8 /* SephoraExerciceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SephoraExerciceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61218EAB2AC45D3000EDE0D8 /* SephoraExerciceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SephoraExerciceUITests.swift; sourceTree = "<group>"; };
 		61218EAD2AC45D3000EDE0D8 /* SephoraExerciceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SephoraExerciceUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -188,6 +188,8 @@
 		61808C4D2AC59BCD0077E6C8 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		61808C5F2AC5A7420077E6C8 /* ProductEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		61808C602AC5A7420077E6C8 /* ProductEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		61808C652AC5D19C0077E6C8 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
+		61808C672AC5D27F0077E6C8 /* ProductsUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsUseCaseMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,8 +303,9 @@
 		61218EA02AC45D3000EDE0D8 /* SephoraExerciceTests */ = {
 			isa = PBXGroup;
 			children = (
-				61218EA12AC45D3000EDE0D8 /* SephoraExerciceTests.swift */,
 				61218FB62AC4947A00EDE0D8 /* XCTest+.swift */,
+				61808C652AC5D19C0077E6C8 /* MainViewModelTests.swift */,
+				61808C672AC5D27F0077E6C8 /* ProductsUseCaseMock.swift */,
 			);
 			path = SephoraExerciceTests;
 			sourceTree = "<group>";
@@ -805,7 +808,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				61218FB72AC4947A00EDE0D8 /* XCTest+.swift in Sources */,
-				61218EA22AC45D3000EDE0D8 /* SephoraExerciceTests.swift in Sources */,
+				61808C662AC5D19C0077E6C8 /* MainViewModelTests.swift in Sources */,
+				61808C682AC5D27F0077E6C8 /* ProductsUseCaseMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -822,10 +826,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61808C622AC5A7420077E6C8 /* ProductEntity+CoreDataProperties.swift in Sources */,
+				61808C6C2AC5D9DE0077E6C8 /* ProductEntity+CoreDataProperties.swift in Sources */,
 				61218F912AC4773C00EDE0D8 /* UseCaseProvider.swift in Sources */,
 				61218F362AC4742500EDE0D8 /* Domain.docc in Sources */,
-				61808C612AC5A7420077E6C8 /* ProductEntity+CoreDataClass.swift in Sources */,
+				61808C6B2AC5D9DE0077E6C8 /* ProductEntity+CoreDataClass.swift in Sources */,
 				61808C052AC578760077E6C8 /* ProductImage.swift in Sources */,
 				61218F902AC4773C00EDE0D8 /* ProductsUseCaseProtocol.swift in Sources */,
 				61218F8F2AC4773600EDE0D8 /* Product.swift in Sources */,

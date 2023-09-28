@@ -21,7 +21,7 @@ struct ProductViewModel: Hashable {
 
 extension ProductViewModel {
     // MARK: - Get Only Properties
-    var id: Int32 { return product.id }
+    var id: Int { return product.id }
     var name: String { return product.name  ?? "" }
     var description: String { return product.description  ?? "" }
     var price: Double { return product.price  ?? 0.0 }

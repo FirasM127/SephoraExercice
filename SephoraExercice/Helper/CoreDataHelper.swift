@@ -89,4 +89,22 @@ class CoreDataHelper {
             return []
         }
     }
+    
+    func removeAllProductData() {
+            let context = persistentContainer.viewContext
+
+            let fetchRequest: NSFetchRequest<Domain.ProductEntity> = Domain.ProductEntity.fetchRequest()
+
+            do {
+                let productEntities = try context.fetch(fetchRequest) as [NSManagedObject]
+                for productEntity in productEntities {
+                    context.delete(productEntity)
+                }
+
+                // Save the context to persist the changes
+                saveContext()
+            } catch {
+                print("Error removing product data: \(error)")
+            }
+        }
 }

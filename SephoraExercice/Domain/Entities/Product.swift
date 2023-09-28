@@ -6,7 +6,7 @@
 //
 
 public struct Product: Codable, Hashable {
-    public var id: Int32
+    public var id: Int
     public var name: String?
     public var description: String?
     public var price: Double?
@@ -23,7 +23,7 @@ public struct Product: Codable, Hashable {
         case isSpecialBrand = "is_special_brand"
     }
 
-    public init(id: Int32,
+    public init(id: Int,
                 name: String?,
                 description: String?,
                 price: Double?,
@@ -39,7 +39,7 @@ public struct Product: Codable, Hashable {
 
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        id = try container.decode(Int32.self, forKey: .id)
+        id = try container.decode(Int.self, forKey: .id)
         name = try? container.decode(String.self, forKey: .name)
         description = try? container.decode(String.self, forKey: .description)
         price = try? container.decode(Double.self, forKey: .price)
@@ -56,12 +56,12 @@ extension Product: Equatable {
 
 public extension Product {
     static func fake (
-        id: Int32 = 12345678,
+        id: Int = Int.random(in: 1...999999),
         name: String = "Channel sensation",
         description: String = "fakeDescription",
         price: Double = 100,
         isSpecialBrand: Bool = true,
-        image: ProductImage 
+        image: ProductImage = ProductImage(small: "")
     ) -> Self {
         .init(id: id,
               name: name,

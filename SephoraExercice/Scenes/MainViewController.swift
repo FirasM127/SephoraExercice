@@ -88,7 +88,6 @@ extension MainViewController {
         snapshot.appendItems(products, toSection: .product)
         dataSource?.apply(snapshot, animatingDifferences: animate)
     }
-    
 }
 
 extension MainViewController {

@@ -16,7 +16,7 @@ final class ProductTests: XCTestCase {
             "product_id": 12345678,
             "product_name": "Mascara Volume Extra Large Immédiat",
             "description": "Craquez pour le Mascara Size Up de Sephora Collection",
-            "price": 140,
+            "price": 140.0,
             "images_url":[
                 "small": "https://dev.sephora.fr/10927_V2.jpg",
                 "large": ""

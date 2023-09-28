@@ -18,7 +18,7 @@ final class ProductsUseCaseTests: XCTestCase {
         sut = .init(network: mockNetwork)
     }
     
-    func test_getTeamsList() {
+    func test_getProducts() {
         //act
         let _ = sut.fetchProducts()
         
@@ -28,7 +28,7 @@ final class ProductsUseCaseTests: XCTestCase {
             [
                 .request(
                     url: .fake(
-                        urlString: "https://www.sephora.com"
+                        urlString: Environment.APIBasePath() + ApiRouter.getProducts.path
                     )
                 )
             ]
