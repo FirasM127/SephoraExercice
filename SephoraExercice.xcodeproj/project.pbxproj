@@ -57,6 +57,8 @@
 		61218FC72AC4DC9E00EDE0D8 /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61218FC52AC4DC9E00EDE0D8 /* ProductTableViewCell.xib */; };
 		61218FC92AC4E31400EDE0D8 /* UITableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61218FC82AC4E31400EDE0D8 /* UITableViewCell+.swift */; };
 		61218FCB2AC4E40900EDE0D8 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61218FCA2AC4E40900EDE0D8 /* ProductViewModel.swift */; };
+		61808C052AC578760077E6C8 /* ProductImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61808C042AC578760077E6C8 /* ProductImage.swift */; };
+		61808C072AC581AC0077E6C8 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61808C062AC581AC0077E6C8 /* UIImageView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,6 +182,8 @@
 		61218FC52AC4DC9E00EDE0D8 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
 		61218FC82AC4E31400EDE0D8 /* UITableViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
 		61218FCA2AC4E40900EDE0D8 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+		61808C042AC578760077E6C8 /* ProductImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImage.swift; sourceTree = "<group>"; };
+		61808C062AC581AC0077E6C8 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -356,6 +360,7 @@
 			children = (
 				61218F772AC4750D00EDE0D8 /* Combine+.swift */,
 				61218FC82AC4E31400EDE0D8 /* UITableViewCell+.swift */,
+				61808C062AC581AC0077E6C8 /* UIImageView+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -394,6 +399,7 @@
 			isa = PBXGroup;
 			children = (
 				61218F8E2AC4773600EDE0D8 /* Product.swift */,
+				61808C042AC578760077E6C8 /* ProductImage.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -758,6 +764,7 @@
 			files = (
 				61218F732AC4749400EDE0D8 /* AppDelegate.swift in Sources */,
 				61218E8C2AC45D2E00EDE0D8 /* ViewController.swift in Sources */,
+				61808C072AC581AC0077E6C8 /* UIImageView+.swift in Sources */,
 				61218F782AC4750D00EDE0D8 /* Combine+.swift in Sources */,
 				61218FBB2AC49BA500EDE0D8 /* AppNavigator.swift in Sources */,
 				61218E922AC45D2E00EDE0D8 /* SephoraExercice.xcdatamodeld in Sources */,
@@ -796,6 +803,7 @@
 			files = (
 				61218F912AC4773C00EDE0D8 /* UseCaseProvider.swift in Sources */,
 				61218F362AC4742500EDE0D8 /* Domain.docc in Sources */,
+				61808C052AC578760077E6C8 /* ProductImage.swift in Sources */,
 				61218F902AC4773C00EDE0D8 /* ProductsUseCaseProtocol.swift in Sources */,
 				61218F8F2AC4773600EDE0D8 /* Product.swift in Sources */,
 			);

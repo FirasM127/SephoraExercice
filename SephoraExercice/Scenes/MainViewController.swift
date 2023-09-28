@@ -52,23 +52,16 @@ class MainViewController: UIViewController {
     }
 
     private func setupTabbleView() {
-        // Set the delegate and data source of the table view to self
-//        tableView.delegate = self
-//        tableView.dataSource = self
-//
-        // Register any custom UITableViewCell subclasses if needed
-        // tableView.register(YourCustomCellClass.self, forCellReuseIdentifier: "CellIdentifier")
-        
-        // Add the table view to the view controller's view
         view.addSubview(tableView)
         
         // Set constraints for the table view (optional, you can use Auto Layout)
+        tableView.backgroundColor = .secondarySystemBackground
+        tableView.separatorStyle = .none
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        
     }
     
     private func registerTableViewCell() {
