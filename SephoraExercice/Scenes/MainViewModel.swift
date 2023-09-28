@@ -12,23 +12,22 @@ import Domain
 class MainViewModel {
     
     // MARK: - Properties
-    private var products: [Product]?
     private var subscriptions = Set<AnyCancellable>()
     private let productsUseCase: ProductsUseCaseProtocol
     private let output: PassthroughSubject<Output, Never> = .init()
-
+    
     // MARK: - Enumerations
     enum Input: Equatable {
         case load
         case refresh
     }
-
+    
     enum Output {
         case fetchProductsDidFinish
         case fetchProductsDidFail(error: Error)
         case fetchProductsDidSuccess(products: [ProductViewModel])
     }
-
+    
     
     // MARK: - Initializer
     init(_ productsUseCases: ProductsUseCaseProtocol) {
@@ -38,20 +37,21 @@ class MainViewModel {
 
 extension MainViewModel {
     // MARK: - User Defined Methods
-        internal func transform(input: AnyPublisher<Input, Never>) -> AnyPublisher<Output, Never> {
+    internal func transform(input: AnyPublisher<Input, Never>) -> AnyPublisher<Output, Never> {
+        
         input.sink { [weak self] event in
             switch event {
-            case .load:
+            case .load, .refresh:
                 if CoreDataHelper.shared.getAllProducts().count > 0 {
-                    self?.output.send(.fetchProductsDidSuccess(products: CoreDataHelper.shared.getAllProducts()
+                    let products = CoreDataHelper.shared.getAllProducts()
                         .map(ProductViewModel.init)
-                        .sortArray())
+                        .sortArray()
+                    self?.output.send(.fetchProductsDidSuccess(products: products)
                     )
+                    self?.output.send(.fetchProductsDidFinish)
                 } else {
                     self?.requestProducts()
                 }
-            case .refresh:
-                self?.requestProducts()
             }
         }.store(in: &subscriptions)
         return output.eraseToAnyPublisher()
@@ -63,14 +63,14 @@ extension MainViewModel {
     
     private func requestProducts() {
         let valueHandler: ([Product]) -> Void = { [weak self] products in
-            self?.products = products
+            
             self?.output.send(.fetchProductsDidSuccess(products: products.map(ProductViewModel.init).sortArray()))
-         
+            
             for product in products {
                 CoreDataHelper.shared.saveProduct(product: product)
             }
         }
-
+        
         let completionHandler: (Subscribers.Completion<Error>) -> Void = { [weak self] completion in
             switch completion {
             case .failure(let error):
@@ -79,7 +79,7 @@ extension MainViewModel {
                 self?.output.send(.fetchProductsDidFinish)
             }
         }
-
+        
         productsUseCase.fetchProducts()
             .sink(receiveCompletion: completionHandler, receiveValue: valueHandler)
             .store(in: &subscriptions)
@@ -89,7 +89,7 @@ extension MainViewModel {
 
 private extension Array where Element == ProductViewModel {
     
-     func sortArray() -> Self {
+    func sortArray() -> Self {
         let sortedArray = sorted { (obj1, obj2) -> Bool in
             return obj1.isSpecialBrand && !obj2.isSpecialBrand
         }

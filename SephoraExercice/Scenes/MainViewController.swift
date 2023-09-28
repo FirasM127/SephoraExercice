@@ -69,11 +69,11 @@ class MainViewController: UIViewController {
         refreshControl.addTarget(self, action: #selector(pullToRefresh(sender:)), for: .valueChanged)
         tableView.refreshControl = refreshControl
         
-        dataSource = DataSource(tableView: tableView, cellProvider: {(tableView, indexPath, user) -> UITableViewCell? in
+        dataSource = DataSource(tableView: tableView, cellProvider: {(tableView, indexPath, item) -> UITableViewCell? in
             guard let cell = tableView.dequeueReusableCell(withIdentifier: ProductTableViewCell.identifier) as? ProductTableViewCell else {
                 return UITableViewCell()
             }
-            cell.updateView(user)
+            cell.updateView(item)
             return cell
         })
     }
@@ -89,12 +89,6 @@ extension MainViewController {
         dataSource?.apply(snapshot, animatingDifferences: animate)
     }
     
-    func remove(_ products: [ProductViewModel], animate: Bool = true) {
-        guard let dataSource = dataSource else {return}
-        var snapshot = dataSource.snapshot()
-        snapshot.deleteItems(products)
-        dataSource.apply(snapshot, animatingDifferences: animate)
-    }
 }
 
 extension MainViewController {

@@ -54,7 +54,7 @@ class CoreDataHelper {
 
     func saveProduct(product: Product) {
         let context = CoreDataHelper.shared.persistentContainer.viewContext
-        let productEntity = ProductEntity(context: context)
+        let productEntity = Domain.ProductEntity(context: context)
         productEntity.id = product.id
         productEntity.name = product.name
         productEntity.productDescription = product.description
@@ -67,7 +67,7 @@ class CoreDataHelper {
 
     func getAllProducts() -> [Product] {
         let context = persistentContainer.viewContext
-        let fetchRequest: NSFetchRequest<ProductEntity> = ProductEntity.fetchRequest()
+        let fetchRequest: NSFetchRequest<Domain.ProductEntity> = Domain.ProductEntity.fetchRequest()
 
         do {
             let productEntities = try context.fetch(fetchRequest) as [AnyObject]
