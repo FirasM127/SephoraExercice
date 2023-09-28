@@ -34,7 +34,6 @@ class MainViewController: UIViewController {
         // Calling user defined methods
         subscribeViewModel()
         registerTableViewCell()
-        input.send(.load)
     }
 
     override func viewDidAppear(_ animated: Bool) {

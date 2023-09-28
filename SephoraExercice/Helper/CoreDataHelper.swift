@@ -11,10 +11,21 @@ import Domain
 
 class CoreDataHelper {
     static let shared = CoreDataHelper()
+    
+    let AppModelName = "AppDataModel"
+    let AppModelExtension = "momd"
+    let platformModuleIdentifier = "firas.mili.Platform"
 
     // The persistent container for the application
     lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "AppDataModel") // Change to your data model name
+        guard let frameworkBundle = Bundle(identifier: platformModuleIdentifier) else {
+            fatalError("Failed to load the framework bundle.")
+        }
+        
+        let modelURL = frameworkBundle.url(forResource: AppModelName, withExtension: AppModelExtension)!
+        let managedObjectModel =  NSManagedObjectModel(contentsOf: modelURL)
+        let container = NSPersistentContainer(name: AppModelName, managedObjectModel: managedObjectModel!)
+        
         container.loadPersistentStores { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
@@ -44,6 +55,7 @@ class CoreDataHelper {
     func saveProduct(product: Product) {
         let context = CoreDataHelper.shared.persistentContainer.viewContext
         let productEntity = ProductEntity(context: context)
+        productEntity.id = product.id
         productEntity.name = product.name
         productEntity.productDescription = product.description
         productEntity.price = product.price ?? 0.0
@@ -58,25 +70,23 @@ class CoreDataHelper {
         let fetchRequest: NSFetchRequest<ProductEntity> = ProductEntity.fetchRequest()
 
         do {
-            let productEntities = try context.fetch(fetchRequest)
-            let products = productEntities.map { mapToProduct(productEntity: $0) }
-            
+            let productEntities = try context.fetch(fetchRequest) as [AnyObject]
+            var products = [Product]()
+            for productEntity in productEntities {
+                products.append(Product(
+                    id: productEntity.id,
+                    name: productEntity.name,
+                    description: productEntity.productDescription,
+                    price: productEntity.price,
+                    isSpecialBrand: productEntity.isSpecialBrand,
+                    image: ProductImage(small: productEntity.image)
+                ))
+            }
+
             return products
         } catch {
             print("Error fetching products: \(error)")
             return []
         }
     }
-    
-    func mapToProduct(productEntity: ProductEntity) -> Product {
-        return Product(
-            id: productEntity.id,
-            name: productEntity.name,
-            description: productEntity.productDescription,
-            price: productEntity.price,
-            isSpecialBrand: productEntity.isSpecialBrand,
-            image: ProductImage(small: productEntity.image)
-        )
-    }
-
 }

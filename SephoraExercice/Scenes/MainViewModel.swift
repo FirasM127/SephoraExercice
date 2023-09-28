@@ -41,7 +41,16 @@ extension MainViewModel {
         internal func transform(input: AnyPublisher<Input, Never>) -> AnyPublisher<Output, Never> {
         input.sink { [weak self] event in
             switch event {
-            case .load, .refresh:
+            case .load:
+                if CoreDataHelper.shared.getAllProducts().count > 0 {
+                    self?.output.send(.fetchProductsDidSuccess(products: CoreDataHelper.shared.getAllProducts()
+                        .map(ProductViewModel.init)
+                        .sortArray())
+                    )
+                } else {
+                    self?.requestProducts()
+                }
+            case .refresh:
                 self?.requestProducts()
             }
         }.store(in: &subscriptions)
@@ -56,6 +65,10 @@ extension MainViewModel {
         let valueHandler: ([Product]) -> Void = { [weak self] products in
             self?.products = products
             self?.output.send(.fetchProductsDidSuccess(products: products.map(ProductViewModel.init).sortArray()))
+         
+            for product in products {
+                CoreDataHelper.shared.saveProduct(product: product)
+            }
         }
 
         let completionHandler: (Subscribers.Completion<Error>) -> Void = { [weak self] completion in
@@ -71,6 +84,7 @@ extension MainViewModel {
             .sink(receiveCompletion: completionHandler, receiveValue: valueHandler)
             .store(in: &subscriptions)
     }
+    
 }
 
 private extension Array where Element == ProductViewModel {

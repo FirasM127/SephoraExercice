@@ -1285,6 +1285,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = firas.mili.Platform;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = Sephora.Platform;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1314,6 +1315,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = firas.mili.Platform;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = Sephora.Platform;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
