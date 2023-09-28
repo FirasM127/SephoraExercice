@@ -27,5 +27,4 @@ extension ProductViewModel {
     var price: Double { return product.price  ?? 0.0 }
     var isSpecialBrand: Bool { return product.isSpecialBrand  ?? false}
     var image: String { return product.image?.small  ?? "" }
-
 }

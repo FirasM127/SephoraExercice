@@ -50,12 +50,12 @@ extension MainViewModel {
 }
 
 extension MainViewModel {
-    // MARK: - Web Requests
+    // MARK: - API Requests
     
     private func requestProducts() {
         let valueHandler: ([Product]) -> Void = { [weak self] products in
             self?.products = products
-            self?.output.send(.fetchProductsDidSuccess(products: products.map(ProductViewModel.init)))
+            self?.output.send(.fetchProductsDidSuccess(products: products.map(ProductViewModel.init).sortArray()))
         }
 
         let completionHandler: (Subscribers.Completion<Error>) -> Void = { [weak self] completion in
@@ -70,5 +70,16 @@ extension MainViewModel {
         productsUseCase.fetchProducts()
             .sink(receiveCompletion: completionHandler, receiveValue: valueHandler)
             .store(in: &subscriptions)
+    }
+}
+
+private extension Array where Element == ProductViewModel {
+    
+     func sortArray() -> Self {
+        let sortedArray = sorted { (obj1, obj2) -> Bool in
+            return obj1.isSpecialBrand && !obj2.isSpecialBrand
+        }
+        
+        return sortedArray
     }
 }

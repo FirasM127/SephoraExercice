@@ -30,8 +30,6 @@
 		61218F732AC4749400EDE0D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61218F722AC4749400EDE0D8 /* AppDelegate.swift */; };
 		61218F752AC474D800EDE0D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61218F742AC474D800EDE0D8 /* SceneDelegate.swift */; };
 		61218F782AC4750D00EDE0D8 /* Combine+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61218F772AC4750D00EDE0D8 /* Combine+.swift */; };
-		61218F7E2AC475BE00EDE0D8 /* AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61218F7D2AC475BE00EDE0D8 /* AlertMessage.swift */; };
-		61218F802AC475DB00EDE0D8 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61218F7F2AC475DB00EDE0D8 /* ViewModelType.swift */; };
 		61218F842AC4764C00EDE0D8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61218F822AC4764C00EDE0D8 /* MainViewController.swift */; };
 		61218F872AC4765B00EDE0D8 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61218F862AC4765B00EDE0D8 /* MainViewModel.swift */; };
 		61218F8F2AC4773600EDE0D8 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61218F8E2AC4773600EDE0D8 /* Product.swift */; };
@@ -161,8 +159,6 @@
 		61218F722AC4749400EDE0D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61218F742AC474D800EDE0D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		61218F772AC4750D00EDE0D8 /* Combine+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+.swift"; sourceTree = "<group>"; };
-		61218F7D2AC475BE00EDE0D8 /* AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
-		61218F7F2AC475DB00EDE0D8 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		61218F822AC4764C00EDE0D8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		61218F862AC4765B00EDE0D8 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		61218F892AC476A300EDE0D8 /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
@@ -278,7 +274,6 @@
 				61218F722AC4749400EDE0D8 /* AppDelegate.swift */,
 				61218F742AC474D800EDE0D8 /* SceneDelegate.swift */,
 				61218F762AC474F400EDE0D8 /* Extensions */,
-				61218F792AC4757600EDE0D8 /* Common */,
 				61218F812AC475F400EDE0D8 /* Scenes */,
 				61218F332AC4742500EDE0D8 /* Domain */,
 				61218F412AC4742600EDE0D8 /* DomainTests */,
@@ -363,15 +358,6 @@
 				61808C062AC581AC0077E6C8 /* UIImageView+.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		61218F792AC4757600EDE0D8 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				61218F7D2AC475BE00EDE0D8 /* AlertMessage.swift */,
-				61218F7F2AC475DB00EDE0D8 /* ViewModelType.swift */,
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 		61218F812AC475F400EDE0D8 /* Scenes */ = {
@@ -769,10 +755,8 @@
 				61218FBB2AC49BA500EDE0D8 /* AppNavigator.swift in Sources */,
 				61218E922AC45D2E00EDE0D8 /* SephoraExercice.xcdatamodeld in Sources */,
 				61218FCB2AC4E40900EDE0D8 /* ProductViewModel.swift in Sources */,
-				61218F7E2AC475BE00EDE0D8 /* AlertMessage.swift in Sources */,
 				61218F752AC474D800EDE0D8 /* SceneDelegate.swift in Sources */,
 				61218FC62AC4DC9E00EDE0D8 /* ProductTableViewCell.swift in Sources */,
-				61218F802AC475DB00EDE0D8 /* ViewModelType.swift in Sources */,
 				61218FC92AC4E31400EDE0D8 /* UITableViewCell+.swift in Sources */,
 				61218F842AC4764C00EDE0D8 /* MainViewController.swift in Sources */,
 				61218F872AC4765B00EDE0D8 /* MainViewModel.swift in Sources */,
