@@ -28,14 +28,12 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Set navigation item title
-        navigationItem.title = "Sephora"
+        navigationItem.title = "Bienvenue chez Sephora"
         setupTabbleView()
-        // Calling user defined methods
         subscribeViewModel()
         registerTableViewCell()
     }
-
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         input.send(.load)
@@ -49,11 +47,10 @@ class MainViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     private func setupTabbleView() {
         view.addSubview(tableView)
         
-        // Set constraints for the table view (optional, you can use Auto Layout)
         tableView.backgroundColor = .secondarySystemBackground
         tableView.separatorStyle = .none
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -69,11 +66,11 @@ class MainViewController: UIViewController {
         refreshControl.addTarget(self, action: #selector(pullToRefresh(sender:)), for: .valueChanged)
         tableView.refreshControl = refreshControl
         
-        dataSource = DataSource(tableView: tableView, cellProvider: {(tableView, indexPath, item) -> UITableViewCell? in
+        dataSource = DataSource(tableView: tableView, cellProvider: {(tableView, indexPath, product) -> UITableViewCell? in
             guard let cell = tableView.dequeueReusableCell(withIdentifier: ProductTableViewCell.identifier) as? ProductTableViewCell else {
                 return UITableViewCell()
             }
-            cell.updateView(item)
+            cell.updateView(product)
             return cell
         })
     }

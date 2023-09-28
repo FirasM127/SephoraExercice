@@ -14,16 +14,12 @@ final class MainViewModelTests: XCTestCase {
 
     private var sut: MainViewModel!
     private var mockProductsUseCase: ProductsUseCaseMock!
-    
     private var input: PassthroughSubject<MainViewModel.Input, Never> = .init()
     private var output: AnyPublisher<MainViewModel.Output, Never>!
     
-    private var cancelBag: CancelBag!
-
     override func setUp() {
         mockProductsUseCase = ProductsUseCaseMock()
         sut = MainViewModel(mockProductsUseCase)
-        cancelBag = CancelBag()
         output = sut.transform(input: input.eraseToAnyPublisher())
     }
 
@@ -45,6 +41,7 @@ final class MainViewModelTests: XCTestCase {
         // arrange
         mockProductsUseCase.calls.removeAll()
         CoreDataHelper.shared.removeAllProductData()
+    
         // act
         input.send(.load)
         

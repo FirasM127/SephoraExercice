@@ -17,6 +17,7 @@ class NetworkMock: NetworkProtocol{
     
     func request<T>(_ url: URL) -> AnyPublisher<[T], Error> where T : Decodable {
         calls.append(.request(url: url))
+
         return Empty().eraseToAnyPublisher()
     }
 }

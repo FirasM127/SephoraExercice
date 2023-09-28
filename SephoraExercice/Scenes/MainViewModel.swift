@@ -28,7 +28,6 @@ class MainViewModel {
         case fetchProductsDidSuccess(products: [ProductViewModel])
     }
     
-    
     // MARK: - Initializer
     init(_ productsUseCases: ProductsUseCaseProtocol) {
         self.productsUseCase = productsUseCases
@@ -36,7 +35,7 @@ class MainViewModel {
 }
 
 extension MainViewModel {
-    // MARK: - User Defined Methods
+
     internal func transform(input: AnyPublisher<Input, Never>) -> AnyPublisher<Output, Never> {
         
         input.sink { [weak self] event in
@@ -46,11 +45,10 @@ extension MainViewModel {
                     let products = CoreDataHelper.shared.getAllProducts()
                         .map(ProductViewModel.init)
                         .sortArray()
-                    self?.output.send(.fetchProductsDidSuccess(products: products)
-                    )
+                    self?.output.send(.fetchProductsDidSuccess(products: products))
                     self?.output.send(.fetchProductsDidFinish)
                 } else {
-                    self?.requestProducts()
+                    self?.fetchProducts()
                 }
             }
         }.store(in: &subscriptions)
@@ -61,11 +59,9 @@ extension MainViewModel {
 extension MainViewModel {
     // MARK: - API Requests
     
-    private func requestProducts() {
+    private func fetchProducts() {
         let valueHandler: ([Product]) -> Void = { [weak self] products in
-            
             self?.output.send(.fetchProductsDidSuccess(products: products.map(ProductViewModel.init).sortArray()))
-            
             for product in products {
                 CoreDataHelper.shared.saveProduct(product: product)
             }

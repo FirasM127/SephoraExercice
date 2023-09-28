@@ -7,11 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		61218E8C2AC45D2E00EDE0D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61218E8B2AC45D2E00EDE0D8 /* ViewController.swift */; };
-		61218E8F2AC45D2E00EDE0D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61218E8D2AC45D2E00EDE0D8 /* Main.storyboard */; };
-		61218E922AC45D2E00EDE0D8 /* SephoraExercice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 61218E902AC45D2E00EDE0D8 /* SephoraExercice.xcdatamodeld */; };
 		61218E942AC45D3000EDE0D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61218E932AC45D3000EDE0D8 /* Assets.xcassets */; };
-		61218E972AC45D3000EDE0D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61218E952AC45D3000EDE0D8 /* LaunchScreen.storyboard */; };
 		61218EAC2AC45D3000EDE0D8 /* SephoraExerciceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61218EAB2AC45D3000EDE0D8 /* SephoraExerciceUITests.swift */; };
 		61218EAE2AC45D3000EDE0D8 /* SephoraExerciceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61218EAD2AC45D3000EDE0D8 /* SephoraExerciceUITestsLaunchTests.swift */; };
 		61218F362AC4742500EDE0D8 /* Domain.docc in Sources */ = {isa = PBXBuildFile; fileRef = 61218F352AC4742500EDE0D8 /* Domain.docc */; };
@@ -28,7 +24,6 @@
 		61218F6B2AC4745200EDE0D8 /* Platform.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61218F552AC4745100EDE0D8 /* Platform.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		61218F732AC4749400EDE0D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61218F722AC4749400EDE0D8 /* AppDelegate.swift */; };
 		61218F752AC474D800EDE0D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61218F742AC474D800EDE0D8 /* SceneDelegate.swift */; };
-		61218F782AC4750D00EDE0D8 /* Combine+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61218F772AC4750D00EDE0D8 /* Combine+.swift */; };
 		61218F842AC4764C00EDE0D8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61218F822AC4764C00EDE0D8 /* MainViewController.swift */; };
 		61218F872AC4765B00EDE0D8 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61218F862AC4765B00EDE0D8 /* MainViewModel.swift */; };
 		61218F8F2AC4773600EDE0D8 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61218F8E2AC4773600EDE0D8 /* Product.swift */; };
@@ -62,6 +57,7 @@
 		61808C682AC5D27F0077E6C8 /* ProductsUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61808C672AC5D27F0077E6C8 /* ProductsUseCaseMock.swift */; };
 		61808C6B2AC5D9DE0077E6C8 /* ProductEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61808C5F2AC5A7420077E6C8 /* ProductEntity+CoreDataClass.swift */; };
 		61808C6C2AC5D9DE0077E6C8 /* ProductEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61808C602AC5A7420077E6C8 /* ProductEntity+CoreDataProperties.swift */; };
+		6184756C2AC5E9D300DB0B05 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 6184756B2AC5E9D200DB0B05 /* products.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,11 +136,7 @@
 
 /* Begin PBXFileReference section */
 		61218E842AC45D2E00EDE0D8 /* SephoraExercice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SephoraExercice.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		61218E8B2AC45D2E00EDE0D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		61218E8E2AC45D2E00EDE0D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		61218E912AC45D2E00EDE0D8 /* SephoraExercice.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SephoraExercice.xcdatamodel; sourceTree = "<group>"; };
 		61218E932AC45D3000EDE0D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		61218E962AC45D3000EDE0D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61218E982AC45D3000EDE0D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61218E9D2AC45D3000EDE0D8 /* SephoraExerciceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SephoraExerciceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61218EA72AC45D3000EDE0D8 /* SephoraExerciceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SephoraExerciceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,7 +154,6 @@
 		61218F652AC4745200EDE0D8 /* PlatformTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformTests.swift; sourceTree = "<group>"; };
 		61218F722AC4749400EDE0D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61218F742AC474D800EDE0D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		61218F772AC4750D00EDE0D8 /* Combine+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+.swift"; sourceTree = "<group>"; };
 		61218F822AC4764C00EDE0D8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		61218F862AC4765B00EDE0D8 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		61218F892AC476A300EDE0D8 /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
@@ -190,6 +181,7 @@
 		61808C602AC5A7420077E6C8 /* ProductEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		61808C652AC5D19C0077E6C8 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
 		61808C672AC5D27F0077E6C8 /* ProductsUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsUseCaseMock.swift; sourceTree = "<group>"; };
+		6184756B2AC5E9D200DB0B05 /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,12 +282,8 @@
 				61218F412AC4742600EDE0D8 /* DomainTests */,
 				61218F562AC4745100EDE0D8 /* Platform */,
 				61218F642AC4745200EDE0D8 /* PlatformTests */,
-				61218E8B2AC45D2E00EDE0D8 /* ViewController.swift */,
-				61218E8D2AC45D2E00EDE0D8 /* Main.storyboard */,
 				61218E932AC45D3000EDE0D8 /* Assets.xcassets */,
-				61218E952AC45D3000EDE0D8 /* LaunchScreen.storyboard */,
 				61218E982AC45D3000EDE0D8 /* Info.plist */,
-				61218E902AC45D2E00EDE0D8 /* SephoraExercice.xcdatamodeld */,
 			);
 			path = SephoraExercice;
 			sourceTree = "<group>";
@@ -352,6 +340,7 @@
 		61218F642AC4745200EDE0D8 /* PlatformTests */ = {
 			isa = PBXGroup;
 			children = (
+				6184756B2AC5E9D200DB0B05 /* products.json */,
 				61218FA42AC48FB700EDE0D8 /* UseCases */,
 				61218FA32AC48FAB00EDE0D8 /* Mocks */,
 				61218F652AC4745200EDE0D8 /* PlatformTests.swift */,
@@ -363,7 +352,6 @@
 		61218F762AC474F400EDE0D8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				61218F772AC4750D00EDE0D8 /* Combine+.swift */,
 				61218FC82AC4E31400EDE0D8 /* UITableViewCell+.swift */,
 				61808C062AC581AC0077E6C8 /* UIImageView+.swift */,
 			);
@@ -394,8 +382,7 @@
 		61218F8D2AC476F100EDE0D8 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				61808C5F2AC5A7420077E6C8 /* ProductEntity+CoreDataClass.swift */,
-				61808C602AC5A7420077E6C8 /* ProductEntity+CoreDataProperties.swift */,
+				6184756D2AC5F32800DB0B05 /* CoreData */,
 				61218F8E2AC4773600EDE0D8 /* Product.swift */,
 				61808C042AC578760077E6C8 /* ProductImage.swift */,
 			);
@@ -500,6 +487,15 @@
 				61808C4D2AC59BCD0077E6C8 /* CoreDataHelper.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		6184756D2AC5F32800DB0B05 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				61808C5F2AC5A7420077E6C8 /* ProductEntity+CoreDataClass.swift */,
+				61808C602AC5A7420077E6C8 /* ProductEntity+CoreDataProperties.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -731,10 +727,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61218E972AC45D3000EDE0D8 /* LaunchScreen.storyboard in Resources */,
 				61218E942AC45D3000EDE0D8 /* Assets.xcassets in Resources */,
 				61218FC72AC4DC9E00EDE0D8 /* ProductTableViewCell.xib in Resources */,
-				61218E8F2AC45D2E00EDE0D8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -777,6 +771,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6184756C2AC5E9D300DB0B05 /* products.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -788,11 +783,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				61218F732AC4749400EDE0D8 /* AppDelegate.swift in Sources */,
-				61218E8C2AC45D2E00EDE0D8 /* ViewController.swift in Sources */,
 				61808C072AC581AC0077E6C8 /* UIImageView+.swift in Sources */,
-				61218F782AC4750D00EDE0D8 /* Combine+.swift in Sources */,
 				61218FBB2AC49BA500EDE0D8 /* AppNavigator.swift in Sources */,
-				61218E922AC45D2E00EDE0D8 /* SephoraExercice.xcdatamodeld in Sources */,
 				61218FCB2AC4E40900EDE0D8 /* ProductViewModel.swift in Sources */,
 				61218F752AC474D800EDE0D8 /* SceneDelegate.swift in Sources */,
 				61808C4E2AC59BCD0077E6C8 /* CoreDataHelper.swift in Sources */,
@@ -915,25 +907,6 @@
 			targetProxy = 61218F682AC4745200EDE0D8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		61218E8D2AC45D2E00EDE0D8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				61218E8E2AC45D2E00EDE0D8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		61218E952AC45D3000EDE0D8 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				61218E962AC45D3000EDE0D8 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		61218EAF2AC45D3000EDE0D8 /* Debug */ = {
@@ -1062,7 +1035,7 @@
 				INFOPLIST_FILE = SephoraExercice/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1090,7 +1063,7 @@
 				INFOPLIST_FILE = SephoraExercice/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1476,16 +1449,6 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		61218E902AC45D2E00EDE0D8 /* SephoraExercice.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				61218E912AC45D2E00EDE0D8 /* SephoraExercice.xcdatamodel */,
-			);
-			currentVersion = 61218E912AC45D2E00EDE0D8 /* SephoraExercice.xcdatamodel */;
-			path = SephoraExercice.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
 		61808C0A2AC5974C0077E6C8 /* AppDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

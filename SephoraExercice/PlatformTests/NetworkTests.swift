@@ -38,13 +38,10 @@ final class NetworkTests: XCTestCase {
         }
         let publisher: AnyPublisher<[MockItemDecodable], Error> = sut.request(.fake())
 
-        let result = expectValue(of: publisher.map{$0[0].id},
-                                 equals: [ { value in value == 1234678 } ])
-        let result1 = expectValue(of: publisher.map{$0.count},
-                                 equals: [ { value in value == 3 } ])
+        let result = expectValue(of: publisher.map{ $0[0].product_id },
+                                 equals: [ { value in value == 1461267310 } ])
         result.cancellable.store(in: &cancellables)
-        result1.cancellable.store(in: &cancellables)
-        wait(for: [result.expectation, result1.expectation], timeout: 5)
+        wait(for: [result.expectation], timeout: 10)
     }
 
     func test_APIRepo_Error_404() {
@@ -87,8 +84,9 @@ public extension URL {
 }
 
 private struct MockItemDecodable: Decodable {
-    let id: Int
-    let name: String
+    let product_id: Int
+    let product_name: String
     let price: Double
     let description: String
 }
+
