@@ -57,6 +57,10 @@
 		61218FCB2AC4E40900EDE0D8 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61218FCA2AC4E40900EDE0D8 /* ProductViewModel.swift */; };
 		61808C052AC578760077E6C8 /* ProductImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61808C042AC578760077E6C8 /* ProductImage.swift */; };
 		61808C072AC581AC0077E6C8 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61808C062AC581AC0077E6C8 /* UIImageView+.swift */; };
+		61808C0C2AC5974C0077E6C8 /* AppDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 61808C0A2AC5974C0077E6C8 /* AppDataModel.xcdatamodeld */; };
+		61808C4E2AC59BCD0077E6C8 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61808C4D2AC59BCD0077E6C8 /* CoreDataHelper.swift */; };
+		61808C612AC5A7420077E6C8 /* ProductEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61808C5F2AC5A7420077E6C8 /* ProductEntity+CoreDataClass.swift */; };
+		61808C622AC5A7420077E6C8 /* ProductEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61808C602AC5A7420077E6C8 /* ProductEntity+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,6 +184,10 @@
 		61218FCA2AC4E40900EDE0D8 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		61808C042AC578760077E6C8 /* ProductImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImage.swift; sourceTree = "<group>"; };
 		61808C062AC581AC0077E6C8 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
+		61808C0B2AC5974C0077E6C8 /* AppDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AppDataModel.xcdatamodel; sourceTree = "<group>"; };
+		61808C4D2AC59BCD0077E6C8 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		61808C5F2AC5A7420077E6C8 /* ProductEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		61808C602AC5A7420077E6C8 /* ProductEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +281,7 @@
 			children = (
 				61218F722AC4749400EDE0D8 /* AppDelegate.swift */,
 				61218F742AC474D800EDE0D8 /* SceneDelegate.swift */,
+				61808C4C2AC59BB90077E6C8 /* Helper */,
 				61218F762AC474F400EDE0D8 /* Extensions */,
 				61218F812AC475F400EDE0D8 /* Scenes */,
 				61218F332AC4742500EDE0D8 /* Domain */,
@@ -329,10 +338,8 @@
 		61218F562AC4745100EDE0D8 /* Platform */ = {
 			isa = PBXGroup;
 			children = (
-				61218F932AC4782400EDE0D8 /* Routers */,
-				61218F942AC4783300EDE0D8 /* Api */,
-				61218F952AC4783A00EDE0D8 /* Network */,
-				61218F962AC4784600EDE0D8 /* UseCases */,
+				61808C092AC596A20077E6C8 /* Local Data Source */,
+				61808C082AC5967B0077E6C8 /* Network Data Source */,
 				61218F572AC4745100EDE0D8 /* Platform.h */,
 				61218F582AC4745100EDE0D8 /* Platform.docc */,
 			);
@@ -384,6 +391,8 @@
 		61218F8D2AC476F100EDE0D8 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				61808C5F2AC5A7420077E6C8 /* ProductEntity+CoreDataClass.swift */,
+				61808C602AC5A7420077E6C8 /* ProductEntity+CoreDataProperties.swift */,
 				61218F8E2AC4773600EDE0D8 /* Product.swift */,
 				61808C042AC578760077E6C8 /* ProductImage.swift */,
 			);
@@ -461,6 +470,33 @@
 				61218FC52AC4DC9E00EDE0D8 /* ProductTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		61808C082AC5967B0077E6C8 /* Network Data Source */ = {
+			isa = PBXGroup;
+			children = (
+				61218F932AC4782400EDE0D8 /* Routers */,
+				61218F942AC4783300EDE0D8 /* Api */,
+				61218F952AC4783A00EDE0D8 /* Network */,
+				61218F962AC4784600EDE0D8 /* UseCases */,
+			);
+			path = "Network Data Source";
+			sourceTree = "<group>";
+		};
+		61808C092AC596A20077E6C8 /* Local Data Source */ = {
+			isa = PBXGroup;
+			children = (
+				61808C0A2AC5974C0077E6C8 /* AppDataModel.xcdatamodeld */,
+			);
+			path = "Local Data Source";
+			sourceTree = "<group>";
+		};
+		61808C4C2AC59BB90077E6C8 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				61808C4D2AC59BCD0077E6C8 /* CoreDataHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -756,6 +792,7 @@
 				61218E922AC45D2E00EDE0D8 /* SephoraExercice.xcdatamodeld in Sources */,
 				61218FCB2AC4E40900EDE0D8 /* ProductViewModel.swift in Sources */,
 				61218F752AC474D800EDE0D8 /* SceneDelegate.swift in Sources */,
+				61808C4E2AC59BCD0077E6C8 /* CoreDataHelper.swift in Sources */,
 				61218FC62AC4DC9E00EDE0D8 /* ProductTableViewCell.swift in Sources */,
 				61218FC92AC4E31400EDE0D8 /* UITableViewCell+.swift in Sources */,
 				61218F842AC4764C00EDE0D8 /* MainViewController.swift in Sources */,
@@ -785,8 +822,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61808C622AC5A7420077E6C8 /* ProductEntity+CoreDataProperties.swift in Sources */,
 				61218F912AC4773C00EDE0D8 /* UseCaseProvider.swift in Sources */,
 				61218F362AC4742500EDE0D8 /* Domain.docc in Sources */,
+				61808C612AC5A7420077E6C8 /* ProductEntity+CoreDataClass.swift in Sources */,
 				61808C052AC578760077E6C8 /* ProductImage.swift in Sources */,
 				61218F902AC4773C00EDE0D8 /* ProductsUseCaseProtocol.swift in Sources */,
 				61218F8F2AC4773600EDE0D8 /* Product.swift in Sources */,
@@ -810,6 +849,7 @@
 				61218FA12AC4790900EDE0D8 /* Environment.swift in Sources */,
 				61218FBE2AC4A30300EDE0D8 /* ProductsUseCaseProvider.swift in Sources */,
 				61218FA22AC4790E00EDE0D8 /* ApiRouter.swift in Sources */,
+				61808C0C2AC5974C0077E6C8 /* AppDataModel.xcdatamodeld in Sources */,
 				61218FBC2AC4A0C600EDE0D8 /* ProductsUseCase.swift in Sources */,
 				61218FA02AC4790500EDE0D8 /* Network.swift in Sources */,
 			);
@@ -1437,6 +1477,16 @@
 			);
 			currentVersion = 61218E912AC45D2E00EDE0D8 /* SephoraExercice.xcdatamodel */;
 			path = SephoraExercice.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		61808C0A2AC5974C0077E6C8 /* AppDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				61808C0B2AC5974C0077E6C8 /* AppDataModel.xcdatamodel */,
+			);
+			currentVersion = 61808C0B2AC5974C0077E6C8 /* AppDataModel.xcdatamodel */;
+			path = AppDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

@@ -12,7 +12,7 @@ public struct ProductImage: Codable, Hashable {
     public var small: String?
     public var large: String?
 
-    init(small: String? = nil, large: String? = nil) {
+    public init(small: String? = nil, large: String? = nil) {
         self.small = small
         self.large = large
     }
